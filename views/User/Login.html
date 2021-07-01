@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/UserStyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<br/><br/><br/>
+<div class="container">
+  <section id="content">
+    <form action="">
+      <h1>Login Form</h1>
+      <div>
+        <input type="email" placeholder="Email" required id="email" autofocus/>
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required id="password" autofocus />
+        <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer;" onmouseover="showpass()" onmouseout="hidepass()">Show Password</i>
+      </div>
+      <br/>
+      <label id="errorMessage" style="color:red; font-size:110%;"></label>
+      <div>
+        <input type="submit" value="Log in" id="login"/>
+        <a href="#"onclick=window.location.href="ChangePassword.html">Lost your password?</a>
+        <a href="#" onclick=window.location.href="Register.html">Register</a>
+      </div>
+    </form>
+  </section>
+</div>
+</body>
+<script src="../../service/UserManager.js"></script>
+<script src="../../assets/js/Login.js"></script>
+</html>
