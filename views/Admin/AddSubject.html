@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Add Subject</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/UserStyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<div class="container"><br/><br/><br/>
+  <section id="content"><center>
+    <form action="" id="form">
+      <h1>Add Subject</h1>
+      <div>
+          <input type="text" placeholder="Subject Code" required id="code" autofocus/>
+      </div>
+      <div>
+          <input type="text" placeholder="Subject Name" required id="name" autofocus/>
+      </div><br/>
+      <label id="errorMessage" style="color:red; font-size:110%;"></label>
+      <div class="center">
+          <center><input type="button"  id="back" onclick=window.location.href="AdminDashBoard.html" value="Back" /></center>
+          <center><input type="submit"  id="submit" value="Add" /></center>
+      </div>
+    </form><br/><br/>
+  </section>
+</div>
+</body>
+<script src="../../service/SubjectManager.js"></script>
+<script src="../../assets/js/AddSubjects.js"></script>
+</html>
