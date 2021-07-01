@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registration</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/AdminStyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<h1><center>Registration Form</center></h1>
+<center><form>
+  <div class="imgcontainer">
+        <img src="../../assets/image/admin.png" class="avatar">
+  </div>
+  <div class="container">
+        <input type="text" placeholder="First Name" required id="firstname" autofocus/><br/>
+        <input type="text" placeholder="Last Name" required id="lastname" autofocus/><br/>
+        <input type="email" placeholder="Email" required id="email" autofocus/><br/>
+        <input type="text" placeholder="Organization Name" required id="organizationname" autofocus/><br/>
+        <input type="password" placeholder="Password" required id="password" autofocus /><br/>
+        <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer;" onmouseover="showpass()" onmouseout="hidepass()">Show Password</i><br/><br/>
+        <label id="errorMessage" style="color:red; font-size:110%;"></label><br/><br/>
+        <button type="button" onclick=window.location.href="AdminLogin.html">Back</button>
+        <button type="submit" id="signin">Sign in</button><br/>
+  </div>
+  
+  <div id="message" style="text-align:left; margin-left:500px;">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid" style="margin-left:40px;">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid" style="margin-left:40px;">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid" style="margin-left:40px;">A <b>number</b></p>
+      <p id="length" class="invalid" style="margin-left:40px;">Minimum <b>8 characters</b></p>
+  </div>
+  <div class="container">
+        
+  </div>
+</form>
+</center>
+</body>
+<script src="../../service/AdminManager.js"></script>
+<script src="../../assets/js/AdminRegistration.js"></script>
+</html>
