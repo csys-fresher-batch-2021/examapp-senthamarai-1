@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change Password</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/AdminStyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<h1><center>Change Password</center></h1>
+<center>
+<form>
+      <div class="imgcontainer">
+            <img src="../../assets/image/admin.png" class="avatar">
+      </div>
+      <div class="container">
+            <input type="email" placeholder="Email" required id="email" autofocus/><br/>
+      </div>
+      <div class="container">
+            <input type="password" placeholder="Password" required id="password" autofocus /><br/>
+      </div>
+      <div class="container">
+            <input type="password" placeholder="Reenter Password" required id="reenter" autofocus /><br/>
+            <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer;" onmouseover="showpass()" onmouseout="hidepass()">Show Password</i><br/><br/>
+      </div>
+      <div>
+            <center><canvas id="captcha" width="200" height="70" style="color:black;">captcha text</canvas></center>
+            <i class="fa fa-refresh" style="cursor: pointer; margin-top:-50px; margin-bottom:10px;" onclick="refreshCaptcha()"> Refresh Captcha</i><br/>
+            <input id="textBox" type="text" name="text"><br/>
+            <label id="errorMessage" style="color:red; font-size:110%;"></label><br/><br/>
+            <button type="button"  onclick=window.location.href="AdminLogin.html">Back</button>
+            <button type="submit" id="submit">Submit</button>  
+      </div>
+      <div id="message" style="text-align:left; margin-left:500px;">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid" style="margin-left:40px;">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid" style="margin-left:40px;">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid" style="margin-left:40px;">A <b>number</b></p>
+            <p id="length" class="invalid" style="margin-left:40px;">Minimum <b>8 characters</b></p>
+      </div>
+      <div id="message1" style="text-align:left; margin-left:500px;">
+            <h3>Password must contain the following:</h3>
+            <p id="letter1" class="invalid" style="margin-left:40px;">A <b>lowercase</b> letter</p>
+            <p id="capital1" class="invalid" style="margin-left:40px;">A <b>capital (uppercase)</b> letter</p>
+            <p id="number1" class="invalid"style="margin-left:40px;">A <b>number</b></p>
+            <p id="length1" class="invalid" style="margin-left:40px;">Minimum <b>8 characters</b></p></center>
+      </div>
+</form>
+</center>
+</body>
+<script src="../../service/AdminManager.js"></script>
+<script src="../../assets/js/AdminChangePassword.js"></script>
+</html>
