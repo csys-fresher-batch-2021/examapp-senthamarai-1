@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/AdminStyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<h1><center>Login Form</center></h1>
+<center>
+<form>
+  <div class="imgcontainer">
+        <img src="../../assets/image/admin.png" class="avatar">
+  </div>
+  <div class="container">
+        <input type="email" placeholder="Email" required id="email" autofocus/><br/>
+        <input type="password" placeholder="Password" required id="password" autofocus /><br/>
+        <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer;" onmouseover="showpass()" onmouseout="hidepass()">Show Password</i><br/><br/>
+        <label id="errorMessage" style="color:red; font-size:110%;"></label><br/>
+        <button type="button" onclick=window.location.href="index.html">Back</button>
+        <button type="submit" id="login">Login</button><br/><br/>
+        <span class="psw"><a href="#"onclick=window.location.href="AdminChange.html">Forgot password?</a></span>
+        <span class="psw"><a>&ensp;</a></span>
+        <span class="psw"><a href="#" onclick=window.location.href="AdminRegister.html">Register</a></span>
+  </div>
+  <div class="container">
+
+  </div>
+</form>
+</center>
+</body>
+<script src="../../service/AdminManager.js"></script>
+<script src="../../assets/js/AdminLogin.js"></script>
+</html>
