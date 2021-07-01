@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Admin DashBoard</title>
+<link rel="stylesheet" type="text/css" href="../../assets/css/DashBoardStyle.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<div class="area"></div>
+<nav class="main-menu">
+<ul>
+    <li>
+        <a class="active">
+        <i class="fa fa-home fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Dashboard
+            </span>
+        </a>        
+    </li>
+    <li class="has-subnav ">
+        <a href="AddSubject.html">
+        <i class="fa fa-book fa-th-list fa-2x"style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Add Subject
+            </span>
+        </a>
+    </li>
+    <li class="has-subnav">
+        <a href="UpdateSubject.html">
+        <i class="fa fa-list-alt fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Update Subject
+            </span>
+        </a>
+    </li>
+    <li class="has-subnav">
+        <a href="DeleteSubject.html">
+        <i class="fa  fa-trash-o fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Delete Subject
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="AddQuestion.html">
+        <i class="fa fa-file-text fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Add Question
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="UpdateQuestion.html">
+        <i class="fa fa-pencil-square fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Update Question
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="DeleteQuestion.html">
+        <i class="fa fa-ban fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Delete Question
+            </span>
+        </a>
+    </li>  
+</ul>
+<ul class="logout">
+    <li>
+        <a href="index.html">
+        <i class="fa fa-power-off fa-2x" style="width: 60px; height: 36px; font-size:20px;"></i>
+            <span class="nav-text" style="font-size:120%">
+                Logout
+            </span>
+        </a>
+    </li>  
+</ul>
+</nav>
+<section class="content">
+<div class="container-fluid">
+  <div class="row" style="margin-left:315px; margin-top:65px; color:white;">
+    <div class="col-lg-3 col-6">
+      <div class="small-box bg-success">
+        <div class="inner">
+            <h3 id="user"></h3>
+            <p>User Registrations</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-users" style="margin-left:120pt; margin-top:-120px; font-size:70px;"></i>
+        </div>
+        <a href="../UserList.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right" style="margin-top:-3px;"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="small-box bg-info">
+        <div class="inner">
+            <h3 id="subject"></h3>
+            <p>Subjects</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-book" style="margin-left:120pt; margin-top:-120px; font-size:75px;"></i>
+        </div>
+        <a href="../SubjectList.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right" style="margin-top:-3px;"></i></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="small-box bg-danger">
+        <div class="inner">
+            <h3 id="question"></h3>
+            <p>Questions</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-file-text" style="margin-left:120pt; margin-top:-120px; font-size:80px;"></i>
+        </div>
+        <a href="../QuestionList.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right" style="margin-top:-3px;"></i></a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <br/>
+    <center><h2 style="font-family:courier; font-size:200%;"><b>How it Works?</b></h2></center>
+    <center><img src="../../assets/image/works.png" alt="How it works!" width="900" height="200" style="margin-left:70px;" ></center>    
+  </div>
+</body>
+<script src="../../service/SubjectManager.js"></script>
+<script src="../../service/QuestionManager.js"></script>
+<script src="../../service/UserManager.js"></script>
+<script src="../../assets/js/DashBoard.js"></script>
+</html>
